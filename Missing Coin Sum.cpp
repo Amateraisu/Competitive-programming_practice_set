@@ -11,7 +11,15 @@ int main() {
     vector<int>A(n, 0);
 
     for (int i = 0; i < n; i++) cin >> A[i];
-    // 1, 2, 2, 7, 9
-    
+    sort(A.begin(), A.end());
+    long long cur = 1;
+    for (int i = 0; i < n ; i++) {
+        if (cur <A[i]) {
+            cout << cur << '\n';
+            return 0;
+        }
+        cur += A[i];
+    }
+    cout << cur << '\n';
     return 0;
 }
