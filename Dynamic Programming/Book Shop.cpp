@@ -18,14 +18,16 @@ int main() {
     for (int i = 0; i < n; i++) cin >> cnt[i];
     // let do a dfs first
     // this is a classic knapsack problem
-    vector<vector<int>>dp(x + 1, vector<int>(n , 0)); // dp[i][j] represents the number of pages I can buy with i from pages till index j
+    vector<vector<int>>dp(n + 1, vector<int>(x + 1 , 0)); // dp[i][j] represents the number of pages I can buy with i from pages till index j
 //    dp[9][2] = 13
-    for (int i = 0; i <= x; i++) {
-        for (int j = 0; j < n ;j++) {
-            
+    // dp[i][j] = max(dp[i-price][j] + pageCount,
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j <= x ;j++) {
+            dp[i + 1][j] = dp[i][j];
+            if (j >= prices[i]) {
+                dp[i + 1][j] = max(dp[i + 1][j], cnt[i] + dp[i][j - prices[i]]);
+            }
         }
     }
-
-
-
+    cout << dp[n][x] << '\n';
 }
