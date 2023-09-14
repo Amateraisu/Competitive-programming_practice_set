@@ -6,23 +6,9 @@
 #include <queue>
 using ll = long long;
 using namespace std;
-ll n, x;
+ll n , x;
 vector<ll>nums;
 
-ll dfs(int l, int r, bool A) {
-    if (l < r) return 0;
-
-    ll res = 0;
-    if (A) {
-        res = max(dfs(l + 1, r, false) + nums[l], dfs(l, r - 1, false));
-
-    } else {
-        res = min(dfs(l + 1, r, true) + nums[l], dfs(l, r - 1, true));
-    }
-
-
-    return res;
-}
 
 int main() {
     cin >> n;
@@ -30,9 +16,17 @@ int main() {
         cin >> x;
         nums.push_back(x);
     }
-
-
-    ll res = dfs(0, n - 1, 0);
-    cout << res << '\n';
+    vector<vector<ll>>dp(n + 1, vector<ll>(n + 1, 0));
+    for (int i = 0 ;i < n; i++) {
+        dp[i][i] = nums[i];
+    }
+    for (int i = n - 1; i >= 0; i--) {
+        for (int j = i + 1; j < n; j++) {
+            dp[i][j] = max(nums[i] - dp[i + 1][j], nums[j] - dp[i][j - 1]);
+        }
+    }
+    ll tot = 0;
+    for (ll i: nums) tot += i;
+    cout << (dp[0][n - 1] + tot)/2 << '\n';
     return 0;
 }
