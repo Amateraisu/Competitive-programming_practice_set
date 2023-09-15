@@ -6,16 +6,13 @@
 #include <map>
 #include <queue>
 #include <climits>
-using ll = long long;
+using ll = unsigned long long;
 using namespace std;
 ll n = 1e5;
 ll m = 2e5;
 vector<ll>vis(n + 1, INT_MAX);
 vector<vector<pair<ll, ll>>>g(n + 1, vector<pair<ll, ll>>());
 ll a, b, c;
-
-
-
 int main() {
 
     cin >> n >> m;
@@ -29,9 +26,11 @@ int main() {
     vis[1] = 0;
     while (!pq.empty()) {
         auto top = pq.top();
-        pq.pop();
+
         ll cost = top.first;
         ll cur = top.second;
+        pq.pop();
+        if (cost > vis[cur]) continue;
         for (auto x : g[cur]) {
             ll co = x.second;
             ll nei = x.first;
