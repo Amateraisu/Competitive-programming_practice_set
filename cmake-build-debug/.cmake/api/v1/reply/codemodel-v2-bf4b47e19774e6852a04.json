@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.25"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "CSES::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CSES-Debug-d01f51932d2324ece2e9.json",
+					"jsonFile" : "target-CSES-Debug-b0aa230e1a7e78c26bd5.json",
 					"name" : "CSES",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/admin/CLionProjects/CSES/cmake-build-debug",
-		"source" : "C:/Users/admin/CLionProjects/CSES"
+		"build" : "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug",
+		"source" : "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }
