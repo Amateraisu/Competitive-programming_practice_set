@@ -32,6 +32,5 @@ int main(){
                 Q.push(v);
         }
     }
-
     printf("%lld\n", dp[N]);
 }
