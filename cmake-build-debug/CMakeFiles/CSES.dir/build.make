@@ -83,17 +83,65 @@ CMakeFiles/CSES.dir/Distinct_Numbers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CSES.dir/Distinct_Numbers.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Distinct Numbers.cpp" -o CMakeFiles/CSES.dir/Distinct_Numbers.cpp.s
 
+CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o: CMakeFiles/CSES.dir/flags.make
+CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o: /Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Download\ Speed.cpp
+CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o: CMakeFiles/CSES.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o -MF CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o.d -o CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o -c "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Download Speed.cpp"
+
+CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Download Speed.cpp" > CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.i
+
+CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Download Speed.cpp" -o CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.s
+
+CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o: CMakeFiles/CSES.dir/flags.make
+CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o: /Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings\ /Word\ Combinations\ .cpp
+CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o: CMakeFiles/CSES.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o -MF CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o.d -o CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o -c "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /Word Combinations .cpp"
+
+CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /Word Combinations .cpp" > CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.i
+
+CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /Word Combinations .cpp" -o CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.s
+
+CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o: CMakeFiles/CSES.dir/flags.make
+CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o: /Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings\ /String\ Matching.cpp
+CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o: CMakeFiles/CSES.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o -MF CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o.d -o CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o -c "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /String Matching.cpp"
+
+CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /String Matching.cpp" > CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.i
+
+CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /String Matching.cpp" -o CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.s
+
 # Object files for target CSES
 CSES_OBJECTS = \
-"CMakeFiles/CSES.dir/Distinct_Numbers.cpp.o"
+"CMakeFiles/CSES.dir/Distinct_Numbers.cpp.o" \
+"CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o" \
+"CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o" \
+"CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o"
 
 # External object files for target CSES
 CSES_EXTERNAL_OBJECTS =
 
 CSES: CMakeFiles/CSES.dir/Distinct_Numbers.cpp.o
+CSES: CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o
+CSES: CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o
+CSES: CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o
 CSES: CMakeFiles/CSES.dir/build.make
 CSES: CMakeFiles/CSES.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CSES"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CSES"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CSES.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

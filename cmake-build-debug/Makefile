@@ -153,6 +153,78 @@ Distinct_Numbers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Distinct_Numbers.cpp.s
 .PHONY : Distinct_Numbers.cpp.s
 
+Graph/Download_Speed.o: Graph/Download_Speed.cpp.o
+.PHONY : Graph/Download_Speed.o
+
+# target to build an object file
+Graph/Download_Speed.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o
+.PHONY : Graph/Download_Speed.cpp.o
+
+Graph/Download_Speed.i: Graph/Download_Speed.cpp.i
+.PHONY : Graph/Download_Speed.i
+
+# target to preprocess a source file
+Graph/Download_Speed.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.i
+.PHONY : Graph/Download_Speed.cpp.i
+
+Graph/Download_Speed.s: Graph/Download_Speed.cpp.s
+.PHONY : Graph/Download_Speed.s
+
+# target to generate assembly for a file
+Graph/Download_Speed.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.s
+.PHONY : Graph/Download_Speed.cpp.s
+
+Strings_/String_Matching.o: Strings_/String_Matching.cpp.o
+.PHONY : Strings_/String_Matching.o
+
+# target to build an object file
+Strings_/String_Matching.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o
+.PHONY : Strings_/String_Matching.cpp.o
+
+Strings_/String_Matching.i: Strings_/String_Matching.cpp.i
+.PHONY : Strings_/String_Matching.i
+
+# target to preprocess a source file
+Strings_/String_Matching.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.i
+.PHONY : Strings_/String_Matching.cpp.i
+
+Strings_/String_Matching.s: Strings_/String_Matching.cpp.s
+.PHONY : Strings_/String_Matching.s
+
+# target to generate assembly for a file
+Strings_/String_Matching.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.s
+.PHONY : Strings_/String_Matching.cpp.s
+
+Strings_/Word_Combinations_.o: Strings_/Word_Combinations_.cpp.o
+.PHONY : Strings_/Word_Combinations_.o
+
+# target to build an object file
+Strings_/Word_Combinations_.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o
+.PHONY : Strings_/Word_Combinations_.cpp.o
+
+Strings_/Word_Combinations_.i: Strings_/Word_Combinations_.cpp.i
+.PHONY : Strings_/Word_Combinations_.i
+
+# target to preprocess a source file
+Strings_/Word_Combinations_.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.i
+.PHONY : Strings_/Word_Combinations_.cpp.i
+
+Strings_/Word_Combinations_.s: Strings_/Word_Combinations_.cpp.s
+.PHONY : Strings_/Word_Combinations_.s
+
+# target to generate assembly for a file
+Strings_/Word_Combinations_.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.s
+.PHONY : Strings_/Word_Combinations_.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +237,15 @@ help:
 	@echo "... Distinct_Numbers.o"
 	@echo "... Distinct_Numbers.i"
 	@echo "... Distinct_Numbers.s"
+	@echo "... Graph/Download_Speed.o"
+	@echo "... Graph/Download_Speed.i"
+	@echo "... Graph/Download_Speed.s"
+	@echo "... Strings_/String_Matching.o"
+	@echo "... Strings_/String_Matching.i"
+	@echo "... Strings_/String_Matching.s"
+	@echo "... Strings_/Word_Combinations_.o"
+	@echo "... Strings_/Word_Combinations_.i"
+	@echo "... Strings_/Word_Combinations_.s"
 .PHONY : help
 
 

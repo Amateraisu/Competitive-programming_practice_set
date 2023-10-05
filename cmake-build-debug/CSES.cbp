@@ -81,6 +81,15 @@
 		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Distinct Numbers.cpp">
 			<Option target="CSES"/>
 		</Unit>
+		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Download Speed.cpp">
+			<Option target="CSES"/>
+		</Unit>
+		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /String Matching.cpp">
+			<Option target="CSES"/>
+		</Unit>
+		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /Word Combinations .cpp">
+			<Option target="CSES"/>
+		</Unit>
 		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

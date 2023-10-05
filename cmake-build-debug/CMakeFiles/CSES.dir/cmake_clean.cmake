@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CSES.dir/Distinct_Numbers.cpp.o"
   "CMakeFiles/CSES.dir/Distinct_Numbers.cpp.o.d"
+  "CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o"
+  "CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o.d"
+  "CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o"
+  "CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o.d"
+  "CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o"
+  "CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o.d"
   "CSES"
   "CSES.pdb"
 )
