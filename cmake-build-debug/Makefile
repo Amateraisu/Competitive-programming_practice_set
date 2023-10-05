@@ -177,6 +177,30 @@ Graph/Download_Speed.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.s
 .PHONY : Graph/Download_Speed.cpp.s
 
+Strings_/Finding_Borders.o: Strings_/Finding_Borders.cpp.o
+.PHONY : Strings_/Finding_Borders.o
+
+# target to build an object file
+Strings_/Finding_Borders.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/Finding_Borders.cpp.o
+.PHONY : Strings_/Finding_Borders.cpp.o
+
+Strings_/Finding_Borders.i: Strings_/Finding_Borders.cpp.i
+.PHONY : Strings_/Finding_Borders.i
+
+# target to preprocess a source file
+Strings_/Finding_Borders.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/Finding_Borders.cpp.i
+.PHONY : Strings_/Finding_Borders.cpp.i
+
+Strings_/Finding_Borders.s: Strings_/Finding_Borders.cpp.s
+.PHONY : Strings_/Finding_Borders.s
+
+# target to generate assembly for a file
+Strings_/Finding_Borders.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Strings_/Finding_Borders.cpp.s
+.PHONY : Strings_/Finding_Borders.cpp.s
+
 Strings_/String_Matching.o: Strings_/String_Matching.cpp.o
 .PHONY : Strings_/String_Matching.o
 
@@ -240,6 +264,9 @@ help:
 	@echo "... Graph/Download_Speed.o"
 	@echo "... Graph/Download_Speed.i"
 	@echo "... Graph/Download_Speed.s"
+	@echo "... Strings_/Finding_Borders.o"
+	@echo "... Strings_/Finding_Borders.i"
+	@echo "... Strings_/Finding_Borders.s"
 	@echo "... Strings_/String_Matching.o"
 	@echo "... Strings_/String_Matching.i"
 	@echo "... Strings_/String_Matching.s"

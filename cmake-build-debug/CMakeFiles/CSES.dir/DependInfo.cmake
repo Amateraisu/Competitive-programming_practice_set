@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Distinct Numbers.cpp" "CMakeFiles/CSES.dir/Distinct_Numbers.cpp.o" "gcc" "CMakeFiles/CSES.dir/Distinct_Numbers.cpp.o.d"
   "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Download Speed.cpp" "CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o" "gcc" "CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.o.d"
+  "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /Finding Borders.cpp" "CMakeFiles/CSES.dir/Strings_/Finding_Borders.cpp.o" "gcc" "CMakeFiles/CSES.dir/Strings_/Finding_Borders.cpp.o.d"
   "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /String Matching.cpp" "CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o" "gcc" "CMakeFiles/CSES.dir/Strings_/String_Matching.cpp.o.d"
   "/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /Word Combinations .cpp" "CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o" "gcc" "CMakeFiles/CSES.dir/Strings_/Word_Combinations_.cpp.o.d"
   )
