@@ -1,74 +1,77 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <set>
-#include <map>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
-using ll = long long;
+constexpr int maxN = 2e5 + 1;
 int n, k;
+set<pair<int, int>>maxi; // the lower half
+set<pair<int, int>>mini; // the upper half
+int arr[maxN];
 
-class MedianFinder {
-public:
-    priority_queue<ll, vector<ll>, less<ll>>smaller; // max heap
-    priority_queue<ll, vector<ll>, greater<ll>>greater; // minheap
-    MedianFinder() {
+int getMedian() {
+    if (maxi.size() + mini.size() == 0) return 0;
+
+    return maxi.rbegin()->first;
+}
+
+void balance() {
+    // always make sure maxi.size() is greater than or equals to mini
+    while (mini.size() > 0 && maxi.size() > 0 && mini.begin()->first < maxi.rbegin()->first) {
+        auto ele = mini.begin();
+        maxi.insert({ele->first, ele->second});
+        mini.erase({ele->first, ele->second});
 
     }
-    void balance() {
+    while (maxi.size() < mini.size()) {
+        auto ele = mini.begin();
+        maxi.insert({ele->first, ele->second});
+        mini.erase({ele->first, ele->second});
 
-        if (!greater.empty() && smaller.top() > greater.top()) {
-            int d = smaller.top();
-            smaller.pop();
-            greater.push(d);
-
-        }
-
-        while (smaller.size() > greater.size() + 1) {
-            int t = smaller.top();
-            smaller.pop();
-            greater.push(t);
-        }
-        while (smaller.size() + 1 < greater.size()) {
-            int t = greater.top();
-            greater.pop();
-            smaller.push(t);
-        }
     }
+    while (maxi.size() > mini.size() + 1) {
+        auto ele = maxi.rbegin();
+        mini.insert({ele->first, ele->second});
+        maxi.erase({ele->first, ele->second});
 
-    void addNum(ll num) {
-        smaller.push((double)num);
-        balance();
     }
+    return;
 
-    ll findMedian() {
-        if (smaller.size() == greater.size()) return smaller.top();
-        if (smaller.size() < greater.size()) {
-            return greater.top();
-        }
-        return smaller.top();
+}
+
+void insert(int num, int index) {
+    mini.insert({num, index});
+    balance();
+    return;
+}
+
+void remove(int num, int index) {
+    if (maxi.find({num, index}) != maxi.end()) {
+        maxi.erase({num, index});
+    } else if (mini.find({num, index}) != mini.end()) {
+        mini.erase({num, index});
     }
-};
+    balance();
+    return;
+}
+
+
 
 int main() {
-    cin >> n >> k;
-    vector<ll>nums(n);
-    for (int i = 0; i < n; i++) cin >> nums[i];
-    vector<ll>res;
-    MedianFinder q;
-    for (int r = 0 ; r < n; r++) {
-        q.addNum(nums[r]);
-        if (r - k + 1 >= 0) {
-            ll re = q.findMedian();
-            res.push_back(re);
+    scanf("%d %d", &n, &k);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        // cout << "INDEX2 " << i << '\n';
+        insert(arr[i], i);
+        if (maxi.size() + mini.size() > k) {
+            remove(arr[i - k], i - k);
         }
-    }
-    for (int i = 0; i < res.size(); i++) {
+        if (maxi.size() + mini.size() == k) {
+            printf("%d \n" ,getMedian());
+        }
 
     }
-
-
 
     return 0;
 }

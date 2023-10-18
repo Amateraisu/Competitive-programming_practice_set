@@ -1,54 +1,42 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <set>
-#include <unordered_set>
-#include <map>
-#include <queue>
-#include <climits>
-using ll = unsigned long long;
+#include <bits/stdc++.h>
+constexpr int maxN = 1e5 + 1;
 using namespace std;
-ll n = 1e5;
-ll m = 2e5;
-vector<ll>vis(n + 1, INT_MAX);
-vector<vector<pair<ll, ll>>>g(n + 1, vector<pair<ll, ll>>());
-ll a, b, c;
+constexpr int maxM = 2e5 + 1;
+constexpr long long INF = 0x3f3f3f3f3f3f3f3f;
+int a, b, c;
+int n, m;
+using ll = long long;
+using edge = tuple<ll, int>;
+ll d[maxN];
+vector<edge> g[maxN];
+
 int main() {
-
-    cin >> n >> m;
-    for (ll i = 0; i < m; i ++) {
-        cin >> a >> b >> c;
-        g[a].push_back({b, c});
+    memset(d, INF, sizeof(d));
+    scanf("%d %d", &n, &m);
+    for  (int i  = 0; i < m ;i++) {
+        scanf("%d %d %d", &a, &b, &c);
+        g[a].push_back({c, b});
     }
-    priority_queue<pair<ll , ll>, vector<pair<ll, ll>>, greater<pair<ll,ll>>>pq;
-
+    d[1] = 0;
+    priority_queue<edge, vector<edge>, greater<edge>>pq; // [cost, node]
     pq.push({0, 1});
-    vis[1] = 0;
     while (!pq.empty()) {
-        auto top = pq.top();
-
-        ll cost = top.first;
-        ll cur = top.second;
-        pq.pop();
-        if (cost > vis[cur]) continue;
-        for (auto x : g[cur]) {
-            ll co = x.second;
-            ll nei = x.first;
-            ll newCo = co + cost;
-            if (newCo < vis[nei]) {
-                vis[nei] = newCo;
-                pq.push({newCo, nei});
+        edge e = pq.top(); pq.pop();
+        ll cost = get<0>(e);
+        int u = get<1>(e);
+        if (cost > d[u]) continue;
+        for (auto e2: g[u]) {
+            int v = get<1>(e2);
+            int fees = get<0>(e2);
+            if (fees + cost < d[v]) {
+                d[v] = fees + cost;
+                pq.push({fees + cost, v});
             }
+
         }
     }
-
-
-    for (ll i = 1; i <= n; i++) {
-        cout << vis[i] << ' ';
+    for (int i = 1; i <= n; i++) {
+        printf("%lld ", d[i]);
     }
-
-
-
-
     return 0;
 }
