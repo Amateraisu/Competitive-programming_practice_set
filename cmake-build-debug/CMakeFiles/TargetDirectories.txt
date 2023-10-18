@@ -1,3 +1,0 @@
-/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles/CSES.dir
-/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/cmake-build-debug/CMakeFiles/rebuild_cache.dir
