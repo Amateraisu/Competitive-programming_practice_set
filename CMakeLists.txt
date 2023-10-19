@@ -7,4 +7,6 @@ add_executable(CSES "Distinct Numbers.cpp"
         "Graph/Download Speed.cpp"
         "Strings /Word Combinations .cpp"
         "Strings /String Matching.cpp"
-        "Strings /Finding Borders.cpp")
+        "Strings /Finding Borders.cpp"
+        "Graph/Course Schedule.cpp"
+        "Graph/Message Route 3.cpp")
