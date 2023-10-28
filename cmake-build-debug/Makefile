@@ -153,6 +153,30 @@ Distinct_Numbers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Distinct_Numbers.cpp.s
 .PHONY : Distinct_Numbers.cpp.s
 
+Graph/Course_Schedule.o: Graph/Course_Schedule.cpp.o
+.PHONY : Graph/Course_Schedule.o
+
+# target to build an object file
+Graph/Course_Schedule.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Course_Schedule.cpp.o
+.PHONY : Graph/Course_Schedule.cpp.o
+
+Graph/Course_Schedule.i: Graph/Course_Schedule.cpp.i
+.PHONY : Graph/Course_Schedule.i
+
+# target to preprocess a source file
+Graph/Course_Schedule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Course_Schedule.cpp.i
+.PHONY : Graph/Course_Schedule.cpp.i
+
+Graph/Course_Schedule.s: Graph/Course_Schedule.cpp.s
+.PHONY : Graph/Course_Schedule.s
+
+# target to generate assembly for a file
+Graph/Course_Schedule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Course_Schedule.cpp.s
+.PHONY : Graph/Course_Schedule.cpp.s
+
 Graph/Download_Speed.o: Graph/Download_Speed.cpp.o
 .PHONY : Graph/Download_Speed.o
 
@@ -176,6 +200,30 @@ Graph/Download_Speed.s: Graph/Download_Speed.cpp.s
 Graph/Download_Speed.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Download_Speed.cpp.s
 .PHONY : Graph/Download_Speed.cpp.s
+
+Graph/Message_Route_3.o: Graph/Message_Route_3.cpp.o
+.PHONY : Graph/Message_Route_3.o
+
+# target to build an object file
+Graph/Message_Route_3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Message_Route_3.cpp.o
+.PHONY : Graph/Message_Route_3.cpp.o
+
+Graph/Message_Route_3.i: Graph/Message_Route_3.cpp.i
+.PHONY : Graph/Message_Route_3.i
+
+# target to preprocess a source file
+Graph/Message_Route_3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Message_Route_3.cpp.i
+.PHONY : Graph/Message_Route_3.cpp.i
+
+Graph/Message_Route_3.s: Graph/Message_Route_3.cpp.s
+.PHONY : Graph/Message_Route_3.s
+
+# target to generate assembly for a file
+Graph/Message_Route_3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CSES.dir/build.make CMakeFiles/CSES.dir/Graph/Message_Route_3.cpp.s
+.PHONY : Graph/Message_Route_3.cpp.s
 
 Strings_/Finding_Borders.o: Strings_/Finding_Borders.cpp.o
 .PHONY : Strings_/Finding_Borders.o
@@ -261,9 +309,15 @@ help:
 	@echo "... Distinct_Numbers.o"
 	@echo "... Distinct_Numbers.i"
 	@echo "... Distinct_Numbers.s"
+	@echo "... Graph/Course_Schedule.o"
+	@echo "... Graph/Course_Schedule.i"
+	@echo "... Graph/Course_Schedule.s"
 	@echo "... Graph/Download_Speed.o"
 	@echo "... Graph/Download_Speed.i"
 	@echo "... Graph/Download_Speed.s"
+	@echo "... Graph/Message_Route_3.o"
+	@echo "... Graph/Message_Route_3.i"
+	@echo "... Graph/Message_Route_3.s"
 	@echo "... Strings_/Finding_Borders.o"
 	@echo "... Strings_/Finding_Borders.i"
 	@echo "... Strings_/Finding_Borders.s"

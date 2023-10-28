@@ -81,7 +81,13 @@
 		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Distinct Numbers.cpp">
 			<Option target="CSES"/>
 		</Unit>
+		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Course Schedule.cpp">
+			<Option target="CSES"/>
+		</Unit>
 		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Download Speed.cpp">
+			<Option target="CSES"/>
+		</Unit>
+		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Graph/Message Route 3.cpp">
 			<Option target="CSES"/>
 		</Unit>
 		<Unit filename="/Users/linkai/Documents/GitHub/Competitive-programming_practice_set/Strings /Finding Borders.cpp">
