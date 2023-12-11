@@ -1,0 +1,52 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+ll n, k, t;
+void test() {
+    cin >> n >> k;
+    vector<ll>nums(n, 0);
+    vector<ll>give(k, 0);
+    for (int i = 0; i < n; ++i) cin >> nums[i];
+    for (int i = 0; i < k; ++i) cin >> give[i];
+    auto c = [&](int a, int b) {
+        return a > b;
+    };
+    sort(nums.begin(), nums.end(), c);
+    sort(give.begin(), give.end());
+
+    ll res = 0;
+    int ptr1 = 0;
+    int ptr2 = 0;
+    int start = 0; // ptr1 is where my boxes start at
+    for (int i = 0; i < k; ++i) {
+        if (give[i] == 1) {
+            res += nums[ptr1] * 2;
+            start = i + 1;
+        } else {
+            res += nums[ptr1];
+            --give[i];
+        }
+        ++ptr1;
+    }
+    // cout << "current result " << res << '\n';
+    // cout << "start " << start << '\n';
+    // cout << "ptr1 " << ptr1 << '\n';
+    while (ptr1 < n) {
+        for (int i = 0; i < give[start] - 1; ++i) {
+            ++ptr1;
+        }
+        res += nums[ptr1];
+        ++ptr1;
+        ++start;
+        // cout << "end up result " << res << '\n';
+    }
+    cout << res << '\n';
+}
+
+
+
+int main() {
+    cin >> t;
+    while (t--) test();
+}
