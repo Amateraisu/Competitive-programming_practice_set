@@ -9,26 +9,15 @@ void test() {
     cin >> n;
     vector<int>nums(n, 0);
     for (int i = 0; i < n; ++i) cin >> nums[i];
-    vector<int>score(n, 0);
     auto c = [](int a, int b) {
+        if (a % 2 == 0) return a < b;
         return a > b;
     };
+    ll res = 0;
     sort(nums.begin(), nums.end(), c);
     for (int i = 0; i < n; ++i) {
         for (int j = i + 1; j < n; ++j) {
-            if (gcd(nums[i] , nums[j] * 2) > 1) {
-                ++score[i];
-            }
-        }
-    }
-    auto d = [&](int a, int b) {
-        return score[a] > score[b];
-    };
-    sort(nums.begin(), nums.end(), d);
-    ll res = 0;
-    for (int i = 0; i < n; ++i) {
-        for (int j = i + 1; j < n; ++j) {
-            if (gcd(nums[i], nums[j] * 2) > 1) ++res;
+            if (gcd(nums[i], nums[j]*2) > 1) {cout << "VALID " << i << ' ' << j <<'\n'; ++res;}
         }
     }
     cout << res << '\n';
