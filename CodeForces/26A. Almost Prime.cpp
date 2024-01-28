@@ -3,20 +3,20 @@ using namespace std;
 int n;
 
 vector<int> get(int i, int maxi) {
-    set<int>ret;
+    vector<int>ret;
 
     while (i % 2 == 0) {
-        ret.insert(2);
+        ret.push_back(2);
         i/=2;
     }
     for (int j = 3; j * j <= maxi; j += 2) {
         while (i % j == 0) {
-            ret.insert(j);
+            ret.push_back(j);
             i /= j;
         }
     }
     if (i > 2) {
-        ret.insert(i);
+        ret.push_back(i);
     }
 
 
