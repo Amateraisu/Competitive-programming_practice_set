@@ -7,54 +7,39 @@
 #include <queue>
 using ll = long long;
 using namespace std;
-ll n = 1e6 + 1;
 
 
 ll x;
 
 vector<int> getPrimes(int n) {
-    int p = 3;
-    vector<int> sieve(n + 1, 1);
-
-    while (p * p <= n) {
-        if (sieve[p]) {
-            for (int x = p * p; x <= n; x += 2 * p) {
-                sieve[x] = 0;
-            }
-        }
-        p += 2;
-    }
-
-    vector<int> primes;
-    primes.push_back(2);
-
-    for (int i = 3; i <= n; i += 2) {
-        if (sieve[i]) {
-            primes.push_back(i);
+    vector<int>ret;
+    for(int i = 2; i * i <= n; ++i) {
+        while (n % i == 0) {
+            ret.push_back(i);
+            n/= i;
         }
     }
 
-    return primes;
+    if (n > 1) ret.push_back(n);
+    return ret;
 }
 
-ll find(ll num, vector<int>& primes) {
-    int res = 1;
-    for (int i = 0 ; i < primes.size() && primes[i] <= num; i++) {
-        int ct = 0;
-        while (num % primes[i] == 0) {
-            num /= primes[i];
-            ct++;
+void test() {
+    int n;
+    cin >> n;
+    int res = 0;
+    for (int i = 1; i * i <= n; ++i) {
+        if (n % i == 0) {
+            res += i * i == n ? 1 : 2;
         }
-        if (ct > 0) res *= ct + 1;
     }
-    return res;
+    std::cout << res << '\n';
+
+
+
 }
 int main() {
-    vector<int>primes = getPrimes(n + 1);
-
+    int n;
     cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> x;
-        cout << find(x, primes) << '\n';
-    }
+    while (n--) test();
 }
