@@ -6,21 +6,37 @@ void test() {
     int n;
     cin >> n;
     vector<int> nums(n);
-    for (int& num : nums) {
-        cin >> num;
+    for (int i = 0; i < n; ++i) cin >> nums[i];
+    ll tot = 0;
+    for (int x : nums) tot += x;
+    if (tot % 3 == 0) {
+        cout << 0 << '\n';
+        return;
     }
-    sort(nums.begin(), nums.end());
-    set<int> s(nums.begin(), nums.end());
-    vector<int>nums2(s.begin(), s.end());
-    int l = 0;
-    int res = 1;
-    for (int r = 0; r < n; ++r) {
-        while (nums2[l] + n < nums2[r]) {
-            ++l;
+    int most = 3 - (tot % 3);
+    // is there a cout of numbers such that tot - these numbers divisible by 3 ?
+
+    if (most == 2) {
+        // is there one number ?
+        for (int x : nums) {
+            if ((tot - x) % 3 == 0) {
+                cout << 1 << '\n';
+                return;
+            }
         }
-        res = max(res, r - l + 1);
+        cout << 2 << '\n';
+    } else {
+        cout << 1 << '\n';
+
     }
-    cout << res << '\n';
+    return;
+
+
+
+
+
+
+
 }
 
 int main() {
