@@ -8,11 +8,17 @@ ll t;
 void test() {
     int n;
     cin >> n;
-    vector<int>nums(n, 0);
-    for (int i = 0; i < n; ++i) cin >> nums[i];
-    ll tot = 0 ;
-    for (int x : nums) tot += abs(x);
-    cout << tot << '\n';
+    string s;
+    cin >> s;
+    string s2 = s;
+    reverse(s.begin(), s.end());
+    if (s2 <= s) {
+        cout << s2 << '\n';
+    } else {
+        // spend one operation to reverse it;
+        cout << s + s2 << '\n';
+    }
+
     return;
 
 }
