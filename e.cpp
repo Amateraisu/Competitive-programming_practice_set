@@ -9,29 +9,27 @@ void test() {
     cin >> s;
     ll res = 0;
     auto can = [&](int t) -> bool {
-        map<int, int>A;
-        bool set = false;
+        unordered_map<int, int>A;
+
+        // increment if 0
+        // decrement afterwards.
+        int cnt = 0;
         for (int i = 0; i < n; ++i) {
-            if (A[i] == 1) set = false;
-            if (!set) {
-                if (s[i] == '1') {
-                    continue;
-                } else {
-                    set = true;
-                    A[i + t] = 1;
-                }
-            } else {
-                if (s[i] == '1') {
-                    return false;
-                } else {
-                    continue;
-                }
+            cnt += A[i];
+            if (s[i] == '0' && (cnt % 2 == 0)) {
+                ++cnt;
+                A[i + t] -= 1;
+            } else if (s[i] == '1' && (cnt % 2 != 0)) {
+                ++cnt;
+                A[i + t] -= 1;
+            } else if (i + t > n) {
+                break;
             }
 
-
         }
-        if (A[n] == 1) set = false;
-        return set == false;
+        cnt += A[n];
+
+        return cnt == 0;
     };
     for (int i = 1; i <= n; ++i) {
         if (can(i)) {
