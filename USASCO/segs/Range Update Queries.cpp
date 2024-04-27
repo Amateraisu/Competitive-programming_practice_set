@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+using namespace std;
 
 using std::cout;
 using std::endl;
@@ -18,12 +19,12 @@ public:
 
     void set(int ind, T val) {
         ind += len;
-        segtree[ind] = val;
+        segtree[ind] += val;
         for (; ind > 1; ind /= 2) {
             segtree[ind / 2] = segtree[ind] + segtree[ind ^ 1];
         }
     }
-
+    // [start, end)
     T range_sum(int start, int end) {
         T sum = DEFAULT;
         for (start += len, end += len; start < end; start /= 2, end /= 2) {
@@ -35,24 +36,28 @@ public:
 };
 
 int main() {
-    int arr_len;
-    int query_num;
-    std::cin >> arr_len >> query_num;
-
-    SumSegmentTree<long long> segtree(arr_len);
-    for (int i = 0; i < arr_len; i++) {
-        int n;
-        std::cin >> n;
-        segtree.set(i, n);
+    int n;
+    int q;
+    std::cin >> n >> q;
+    vector<int>A(n, 0);
+    for (int i = 0; i < n; ++i) cin >> A[i];
+    SumSegmentTree<long long> segtree(n + 1);
+    for (int i = 0; i < n; ++i) {
+        segtree.set(i, A[i]);
+        segtree.set(i + 1, -A[i]);
     }
 
-    for (int q = 0; q < query_num; q++) {
-        int type, arg1, arg2;
-        std::cin >> type >> arg1 >> arg2;
+    for (int i = 0; i < q; i++) {
+        int type, a, b, c;
+        std::cin >> type;
         if (type == 1) {
-            segtree.set(arg1 - 1, arg2);
+            cin >> a >> b >> c;
+
+            segtree.set(a - 1, c);
+            segtree.set(b, -c);
         } else if (type == 2) {
-            cout << segtree.range_sum(arg1 - 1, arg2) << '\n';
+            cin >> b;
+            cout << segtree.range_sum(0, b) << '\n';
         }
     }
 }

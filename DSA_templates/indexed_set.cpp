@@ -16,6 +16,9 @@ int main() {
     tree.insert(1);
     tree.insert(2);
     tree.insert(3);
+    tree.erase(1);
+    // also supports erase
+    // used to find the kth element in here (in here it is sorted)
     std::cout << *tree.lower_bound(3) << '\n';
     std::cout << tree.size() << '\n';
     std::cout << tree.order_of_key() << '\n'; //  0 -indexed. what order does a key come in.

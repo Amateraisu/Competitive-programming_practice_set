@@ -1,36 +1,36 @@
 #include <iostream>
 #include <vector>
-#include <bits/stdc++.h>
+
 using std::cout;
 using std::endl;
 using std::vector;
-using std::min;
-template <typename T>
-class MinSegmentTree {
+
+template <class T>
+class SumSegmentTree {
 private:
-    const T DEFAULT = 0x3f3f3f3f3f3f3f3f;
+    const T DEFAULT = 0;
 
     vector<T> segtree;
     int len;
 
 public:
-    MinSegmentTree(int len) : len(len), segtree(len * 2, DEFAULT) {}
+    SumSegmentTree(int len) : len(len), segtree(len * 2, DEFAULT) {}
 
     void set(int ind, T val) {
         ind += len;
         segtree[ind] = val;
         for (; ind > 1; ind /= 2) {
-            segtree[ind / 2] = min(segtree[ind] , segtree[ind ^ 1]);
+            segtree[ind / 2] = segtree[ind] + segtree[ind ^ 1];
         }
     }
     // [start, end)
     T range_sum(int start, int end) {
-        T mini = DEFAULT;
+        T sum = DEFAULT;
         for (start += len, end += len; start < end; start /= 2, end /= 2) {
-            if (start % 2 == 1) { mini = min(mini, segtree[start++]); }
-            if (end % 2 == 1) { mini = min(mini, segtree[--end]); }
+            if (start % 2 == 1) { sum += segtree[start++]; }
+            if (end % 2 == 1) { sum += segtree[--end]; }
         }
-        return mini;
+        return sum;
     }
 };
 
@@ -39,7 +39,7 @@ int main() {
     int query_num;
     std::cin >> arr_len >> query_num;
 
-    MinSegmentTree<long long> segtree(arr_len);
+    SumSegmentTree<long long> segtree(arr_len);
     for (int i = 0; i < arr_len; i++) {
         int n;
         std::cin >> n;
