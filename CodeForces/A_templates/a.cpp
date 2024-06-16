@@ -8,16 +8,16 @@ ll t;
 void test() {
     int n;
     cin >> n;
-    string s;
-    cin >> s;
-    string s2 = s;
-    reverse(s.begin(), s.end());
-    if (s2 <= s) {
-        cout << s2 << '\n';
-    } else {
-        // spend one operation to reverse it;
-        cout << s + s2 << '\n';
+    vector<int>A(n, 0);
+    for (int i = 0; i < n; ++i) cin >> A[i];
+    ll mini = 1e9 + 7;
+    for (int i = 0; i < n - 1; ++i) {
+        ll maxi = max(A[i], A[i + 1]);
+        mini = min(mini, maxi);
+
     }
+
+    std::cout << mini - 1 << '\n';
 
     return;
 
