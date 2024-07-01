@@ -24,6 +24,6 @@ int main() {
     // used to find the kth element in here (in here it is sorted)
     std::cout << *tree.lower_bound(3) << '\n';
     std::cout << tree.size() << '\n';
-    std::cout << tree.order_of_key() << '\n'; //  0 -indexed. what order does a key come in.
+    std::cout << tree.order_of_key(k) << '\n'; //  0 -indexed. what order does a key come in, gives the count of elements STRICTLY lesser than k
     std::cout << tree.find_by_order() << '\n' ; // 0-indexed. what key is at given order.
 }
