@@ -5,8 +5,11 @@ using namespace std;
 using namespace __gnu_pbds;
 template <class T>
 using Tree =
-        tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+        tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>; // distinct elements only
 
+template <class T>
+using TreeDup =
+        tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>; // for allow duplicate elements
 
 int main() {
     Tree<int>tree;
